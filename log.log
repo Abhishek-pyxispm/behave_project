@@ -1,0 +1,2026 @@
+20/04/2021 02:59:42 AM - <module> - INFO - Base URL set to :https://optimization-staging.pyxispm.com/api/
+20/04/2021 02:59:42 AM - <module> - INFO - Headers set to :{'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+20/04/2021 02:59:42 AM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+20/04/2021 02:59:42 AM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+20/04/2021 02:59:42 AM - <module> - INFO - Performing post
+20/04/2021 02:59:43 AM - <module> - INFO - Response: {'error': False, 'data': {'id': 7516, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8822, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7516, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8822}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+20/04/2021 02:59:43 AM - <module> - INFO - Actule Response Code: 200
+20/04/2021 02:59:43 AM - <module> - INFO - Expected Response Code: 200
+20/04/2021 02:59:43 AM - <module> - INFO - Actule Error Code: False
+20/04/2021 02:59:43 AM - <module> - INFO - Expected Error Code: False
+20/04/2021 02:59:43 AM - <module> - INFO - Tactic Id: 7516
+20/04/2021 06:27:45 PM - <module> - INFO - Base URL set to :https://optimization-staging.pyxispm.com/api/
+20/04/2021 06:27:45 PM - <module> - INFO - Headers set to :{'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+20/04/2021 06:27:45 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+20/04/2021 06:28:20 PM - <module> - INFO - Base URL set to :https://optimization-staging.pyxispm.com/api/
+20/04/2021 06:28:20 PM - <module> - INFO - Headers set to :{'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+20/04/2021 06:28:20 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+20/04/2021 06:28:20 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+20/04/2021 06:28:20 PM - <module> - INFO - Performing post
+20/04/2021 06:28:21 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7527, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8833, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7527, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8833}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+20/04/2021 06:28:21 PM - <module> - INFO - Actule Response Code: 200
+20/04/2021 06:28:21 PM - <module> - INFO - Expected Response Code: 200
+20/04/2021 06:28:21 PM - <module> - INFO - Actule Error Code: False
+20/04/2021 06:28:21 PM - <module> - INFO - Expected Error Code: False
+20/04/2021 06:28:21 PM - <module> - INFO - Tactic Id: 7527
+20/04/2021 06:29:28 PM - <module> - INFO - Base URL set to :https://optimization-staging.pyxispm.com/api/
+20/04/2021 06:29:28 PM - <module> - INFO - Headers set to :{'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+20/04/2021 06:29:28 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+20/04/2021 06:29:28 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+20/04/2021 06:29:28 PM - <module> - INFO - Performing post
+20/04/2021 06:29:28 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7528, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8834, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7528, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8834}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+20/04/2021 06:29:28 PM - <module> - INFO - Actule Response Code: 200
+20/04/2021 06:29:28 PM - <module> - INFO - Expected Response Code: 200
+20/04/2021 06:29:28 PM - <module> - INFO - Actule Error Code: False
+20/04/2021 06:29:28 PM - <module> - INFO - Expected Error Code: False
+20/04/2021 06:29:28 PM - <module> - INFO - Tactic Id: 7528
+20/04/2021 07:00:55 PM - <module> - INFO - Base URL set to :https://optimization-staging.pyxispm.com/api/
+20/04/2021 07:00:55 PM - <module> - INFO - Headers set to :{'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+20/04/2021 07:00:55 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+20/04/2021 07:00:55 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+20/04/2021 07:00:55 PM - <module> - INFO - Performing post
+20/04/2021 07:00:56 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7529, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8835, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7529, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8835}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+20/04/2021 07:00:56 PM - <module> - INFO - Actule Response Code: 200
+20/04/2021 07:00:56 PM - <module> - INFO - Expected Response Code: 200
+20/04/2021 07:00:56 PM - <module> - INFO - Actule Error Code: False
+20/04/2021 07:00:56 PM - <module> - INFO - Expected Error Code: False
+20/04/2021 07:00:56 PM - <module> - INFO - Tactic Id: 7529
+20/04/2021 07:01:20 PM - <module> - INFO - Base URL set to :https://optimization-staging.pyxispm.com/api/
+20/04/2021 07:01:20 PM - <module> - INFO - Headers set to :{'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+20/04/2021 07:01:20 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+20/04/2021 07:01:20 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+20/04/2021 07:01:20 PM - <module> - INFO - Performing post
+20/04/2021 07:01:20 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7530, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8836, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7530, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8836}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+20/04/2021 07:01:20 PM - <module> - INFO - Actule Response Code: 200
+20/04/2021 07:01:20 PM - <module> - INFO - Expected Response Code: 200
+20/04/2021 07:01:20 PM - <module> - INFO - Actule Error Code: False
+20/04/2021 07:01:20 PM - <module> - INFO - Expected Error Code: False
+20/04/2021 07:01:20 PM - <module> - INFO - Tactic Id: 7530
+21/04/2021 02:09:44 AM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 02:09:44 AM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 02:09:44 AM - <module> - INFO - account_id set to : 36
+21/04/2021 02:09:44 AM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 02:09:44 AM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 02:09:44 AM - <module> - INFO - Performing post
+21/04/2021 02:09:44 AM - <module> - INFO - Response: {'error': False, 'data': {'id': 7604, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8910, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7604, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8910}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 02:09:44 AM - <module> - INFO - Actule Response Code: 200
+21/04/2021 02:09:44 AM - <module> - INFO - Expected Response Code: 200
+21/04/2021 02:09:44 AM - <module> - INFO - Actule Error Code: False
+21/04/2021 02:09:44 AM - <module> - INFO - Expected Error Code: False
+21/04/2021 02:09:44 AM - <module> - INFO - Tactic Id: 7604
+21/04/2021 04:33:58 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 04:33:58 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 04:33:58 PM - <module> - INFO - account_id set to : 36
+21/04/2021 04:33:58 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 04:36:53 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 04:36:53 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 04:36:53 PM - <module> - INFO - account_id set to : 36
+21/04/2021 04:36:53 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 04:36:53 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 04:36:53 PM - <module> - INFO - Performing post
+21/04/2021 04:36:54 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7622, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8931, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7622, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8931}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 04:36:54 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 04:36:54 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 04:36:54 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 04:36:54 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 04:36:54 PM - <module> - INFO - Tactic Id: 7622
+21/04/2021 04:51:30 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 04:51:30 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 04:51:30 PM - <module> - INFO - account_id set to : 36
+21/04/2021 04:51:30 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 04:52:16 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 04:52:16 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 04:52:16 PM - <module> - INFO - account_id set to : 36
+21/04/2021 04:52:16 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 04:58:26 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 04:58:26 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 04:58:26 PM - <module> - INFO - account_id set to : 36
+21/04/2021 04:58:26 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 04:58:26 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 04:58:26 PM - <module> - INFO - Performing post
+21/04/2021 04:58:27 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7623, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8932, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7623, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8932}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 04:58:27 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 04:58:27 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 04:58:27 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 04:58:27 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 04:58:27 PM - <module> - INFO - Tactic Id: 7623
+21/04/2021 05:17:23 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:17:23 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:17:23 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:17:23 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:17:23 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:17:23 PM - <module> - INFO - Performing post
+21/04/2021 05:17:23 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7624, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8933, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7624, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8933}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:17:23 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:17:23 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 05:17:23 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 05:17:23 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 05:17:23 PM - <module> - INFO - Tactic Id: 7624
+21/04/2021 05:17:23 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:17:23 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:17:23 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:17:23 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:17:23 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:17:23 PM - <module> - INFO - Performing post
+21/04/2021 05:17:23 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7625, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8934, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7625, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8934}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:17:23 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:17:23 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 05:17:23 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 05:17:23 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 05:17:23 PM - <module> - INFO - Tactic status: draft
+21/04/2021 05:24:48 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:24:48 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:24:48 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:24:48 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:24:48 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:24:48 PM - <module> - INFO - Performing post
+21/04/2021 05:24:48 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7626, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8935, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7626, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8935}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:24:48 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:24:48 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 05:24:48 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 05:24:48 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 05:24:48 PM - <module> - INFO - Tactic Id: 7626
+21/04/2021 05:24:48 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:24:48 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:24:48 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:24:48 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:24:48 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:24:48 PM - <module> - INFO - Performing post
+21/04/2021 05:24:48 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7627, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8936, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7627, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8936}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:24:48 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:24:48 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 05:24:48 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 05:24:48 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 05:24:48 PM - <module> - INFO - Tactic status: draft
+21/04/2021 05:24:48 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:24:48 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:24:48 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:24:48 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:24:48 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:24:48 PM - <module> - INFO - Performing post
+21/04/2021 05:24:49 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7628, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8937, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7628, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8937}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:24:49 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:24:49 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 05:24:49 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 05:24:49 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 05:24:49 PM - <module> - INFO - Tactic status: draft
+21/04/2021 05:24:49 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:24:49 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:24:49 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:24:49 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:24:49 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:24:49 PM - <module> - INFO - Performing post
+21/04/2021 05:24:49 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7629, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8938, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7629, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8938}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:24:49 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:24:49 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 05:24:49 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 05:24:49 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 05:24:49 PM - <module> - INFO - Tactic status: draft
+21/04/2021 05:24:49 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:24:49 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:24:49 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:24:49 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:24:49 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:24:49 PM - <module> - INFO - Performing post
+21/04/2021 05:24:49 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7630, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8939, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7630, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8939}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:24:49 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:24:49 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 05:24:49 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 05:24:49 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 05:24:49 PM - <module> - INFO - Tactic status: draft
+21/04/2021 05:24:49 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:24:49 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:24:49 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:24:49 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:24:49 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:24:49 PM - <module> - INFO - Performing post
+21/04/2021 05:24:49 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7631, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8940, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7631, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8940}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:24:49 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:24:49 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 05:24:49 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 05:24:49 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 05:24:49 PM - <module> - INFO - Tactic status: draft
+21/04/2021 05:27:28 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:27:28 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:27:28 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:27:28 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:27:28 PM - <module> - INFO - Test case name: po_01**********************************
+21/04/2021 05:27:28 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:27:28 PM - <module> - INFO - Performing post
+21/04/2021 05:27:29 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7632, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8941, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7632, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8941}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:27:29 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:27:29 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 05:27:29 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 05:27:29 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 05:27:29 PM - <module> - INFO - Tactic Id: 7632
+21/04/2021 05:27:29 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:27:29 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:27:29 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:27:29 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:27:29 PM - <module> - INFO - Test case name: po_02**********************************
+21/04/2021 05:27:29 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:27:29 PM - <module> - INFO - Performing post
+21/04/2021 05:27:29 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7633, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8942, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7633, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8942}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:27:29 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:27:29 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 05:27:29 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 05:27:29 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 05:27:29 PM - <module> - INFO - Tactic status: draft
+21/04/2021 05:27:29 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:27:29 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:27:29 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:27:29 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:27:29 PM - <module> - INFO - Test case name: po_02**********************************
+21/04/2021 05:27:29 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:27:29 PM - <module> - INFO - Performing post
+21/04/2021 05:27:29 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7634, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8943, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7634, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8943}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:27:29 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:27:29 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 05:27:29 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 05:27:29 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 05:27:29 PM - <module> - INFO - Tactic status: draft
+21/04/2021 05:27:29 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:27:29 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:27:29 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:27:29 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:27:29 PM - <module> - INFO - Test case name: po_02**********************************
+21/04/2021 05:27:29 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:27:29 PM - <module> - INFO - Performing post
+21/04/2021 05:27:29 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7635, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8944, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7635, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8944}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:27:29 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:27:29 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 05:27:29 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 05:27:29 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 05:27:29 PM - <module> - INFO - Tactic status: draft
+21/04/2021 05:27:29 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:27:29 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:27:29 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:27:29 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:27:29 PM - <module> - INFO - Test case name: po_02**********************************
+21/04/2021 05:27:29 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:27:29 PM - <module> - INFO - Performing post
+21/04/2021 05:27:30 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7636, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8945, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7636, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8945}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:27:30 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:27:30 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 05:27:30 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 05:27:30 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 05:27:30 PM - <module> - INFO - Tactic status: draft
+21/04/2021 05:27:30 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:27:30 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:27:30 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:27:30 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:27:30 PM - <module> - INFO - Test case name: po_02**********************************
+21/04/2021 05:27:30 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:27:30 PM - <module> - INFO - Performing post
+21/04/2021 05:27:30 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7637, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8946, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7637, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8946}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:27:30 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:27:30 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 05:27:30 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 05:27:30 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 05:27:30 PM - <module> - INFO - Tactic status: draft
+21/04/2021 05:35:46 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:35:46 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:35:46 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:35:46 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:35:46 PM - <module> - INFO - Test case name: po_01**********************************
+21/04/2021 05:35:46 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:35:46 PM - <module> - INFO - Performing post
+21/04/2021 05:35:48 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7638, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8947, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7638, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8947}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:35:48 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:35:48 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 05:35:48 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 05:35:48 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 05:35:48 PM - <module> - INFO - Tactic Id: 7638
+21/04/2021 05:35:48 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:35:48 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:35:48 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:35:48 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:35:48 PM - <module> - INFO - Test case name: po_02**********************************
+21/04/2021 05:35:48 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:35:48 PM - <module> - INFO - Performing post
+21/04/2021 05:35:48 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7639, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8948, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7639, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8948}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:35:48 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:35:48 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 05:35:48 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 05:35:48 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 05:35:48 PM - <module> - INFO - Tactic status: draft
+21/04/2021 05:35:48 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:35:48 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:35:48 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:35:48 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:35:48 PM - <module> - INFO - Test case name: po_03**********************************
+21/04/2021 05:35:48 PM - <module> - INFO - Body set to: {
+        "status": "on",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:35:48 PM - <module> - INFO - Performing post
+21/04/2021 05:35:48 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7640, 'name': None, 'start_date': None, 'end_date': None, 'status': 'on', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8949, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7640, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8949}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'on', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:35:48 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:35:48 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 05:35:48 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 05:35:48 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 05:35:48 PM - <module> - INFO - Tactic status: on
+21/04/2021 05:35:48 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:35:48 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:35:48 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:35:48 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:35:48 PM - <module> - INFO - Test case name: po_04**********************************
+21/04/2021 05:35:48 PM - <module> - INFO - Body set to: {
+        "status": "off",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:35:48 PM - <module> - INFO - Performing post
+21/04/2021 05:35:48 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7641, 'name': None, 'start_date': None, 'end_date': None, 'status': 'off', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8950, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7641, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8950}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'off', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:35:48 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:35:48 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 05:35:48 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 05:35:48 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 05:35:48 PM - <module> - INFO - Tactic status: off
+21/04/2021 05:35:48 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:35:48 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:35:48 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:35:48 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:35:48 PM - <module> - INFO - Test case name: po_05**********************************
+21/04/2021 05:35:48 PM - <module> - INFO - Body set to: {
+        "status": null,
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:35:48 PM - <module> - INFO - Performing post
+21/04/2021 05:35:49 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7642, 'name': None, 'start_date': None, 'end_date': None, 'status': None, 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8951, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7642, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8951}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': None, 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:35:49 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:35:49 PM - <module> - INFO - Expected Response Code: 400
+21/04/2021 05:35:49 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:35:49 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:35:49 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:35:49 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:35:49 PM - <module> - INFO - Test case name: po_06**********************************
+21/04/2021 05:35:49 PM - <module> - INFO - Body set to: {
+        "status": "xyz",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:35:49 PM - <module> - INFO - Performing post
+21/04/2021 05:35:49 PM - <module> - INFO - Response: {'error': True, 'data': {'status': ['"xyz" is not a valid choice.']}}
+21/04/2021 05:35:49 PM - <module> - INFO - Actule Response Code: 400
+21/04/2021 05:35:49 PM - <module> - INFO - Expected Response Code: 400
+21/04/2021 05:35:49 PM - <module> - INFO - Actule Error Code: True
+21/04/2021 05:35:49 PM - <module> - INFO - Expected Error Code: TRUE
+21/04/2021 05:35:49 PM - <module> - INFO - Tactic status: ['"xyz" is not a valid choice.']
+21/04/2021 05:49:44 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:49:44 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:49:44 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:49:44 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:49:44 PM - <module> - INFO - Test case name: po_01**********************************
+21/04/2021 05:49:44 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:49:44 PM - <module> - INFO - Performing post
+21/04/2021 05:49:45 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7643, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8952, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7643, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8952}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:49:45 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:49:45 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 05:49:45 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 05:49:45 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 05:49:45 PM - <module> - INFO - Tactic Id: 7643
+21/04/2021 05:49:45 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:49:45 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:49:45 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:49:45 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:49:45 PM - <module> - INFO - Test case name: po_02**********************************
+21/04/2021 05:49:45 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:49:45 PM - <module> - INFO - Performing post
+21/04/2021 05:49:45 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7644, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8953, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7644, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8953}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:49:45 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:49:45 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 05:49:45 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 05:49:45 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 05:49:45 PM - <module> - INFO - Tactic status: draft
+21/04/2021 05:49:45 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:49:45 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:49:45 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:49:45 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:49:45 PM - <module> - INFO - Test case name: po_03**********************************
+21/04/2021 05:49:45 PM - <module> - INFO - Body set to: {
+        "status": "on",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:49:45 PM - <module> - INFO - Performing post
+21/04/2021 05:49:45 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7645, 'name': None, 'start_date': None, 'end_date': None, 'status': 'on', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8954, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7645, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8954}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'on', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:49:45 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:49:45 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 05:49:45 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 05:49:45 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 05:49:45 PM - <module> - INFO - Tactic status: on
+21/04/2021 05:49:45 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:49:45 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:49:45 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:49:45 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:49:45 PM - <module> - INFO - Test case name: po_04**********************************
+21/04/2021 05:49:45 PM - <module> - INFO - Body set to: {
+        "status": "off",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:49:45 PM - <module> - INFO - Performing post
+21/04/2021 05:49:45 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7646, 'name': None, 'start_date': None, 'end_date': None, 'status': 'off', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8955, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7646, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8955}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'off', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:49:45 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:49:45 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 05:49:45 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 05:49:45 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 05:49:45 PM - <module> - INFO - Tactic status: off
+21/04/2021 05:49:45 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:49:45 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:49:45 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:49:45 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:49:45 PM - <module> - INFO - Test case name: po_05**********************************
+21/04/2021 05:49:45 PM - <module> - INFO - Body set to: {
+        "status": null,
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:49:45 PM - <module> - INFO - Performing post
+21/04/2021 05:49:46 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7647, 'name': None, 'start_date': None, 'end_date': None, 'status': None, 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8956, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7647, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8956}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': None, 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 05:49:46 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 05:49:46 PM - <module> - INFO - Expected Response Code: 400
+21/04/2021 05:49:46 PM - <module> - ERROR - Actule Response Code(200) does not matches Expected Response Code(400)
+21/04/2021 05:49:46 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 05:49:46 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 05:49:46 PM - <module> - INFO - account_id set to : 36
+21/04/2021 05:49:46 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 05:49:46 PM - <module> - INFO - Test case name: po_06**********************************
+21/04/2021 05:49:46 PM - <module> - INFO - Body set to: {
+        "status": "xyz",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 05:49:46 PM - <module> - INFO - Performing post
+21/04/2021 05:49:46 PM - <module> - INFO - Response: {'error': True, 'data': {'status': ['"xyz" is not a valid choice.']}}
+21/04/2021 05:49:46 PM - <module> - INFO - Actule Response Code: 400
+21/04/2021 05:49:46 PM - <module> - INFO - Expected Response Code: 400
+21/04/2021 05:49:46 PM - <module> - INFO - Actule Error Code: True
+21/04/2021 05:49:46 PM - <module> - INFO - Expected Error Code: TRUE
+21/04/2021 06:02:46 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 06:02:46 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 06:02:46 PM - <module> - INFO - account_id set to : 36
+21/04/2021 06:02:46 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 06:02:46 PM - <module> - INFO - Test case name: po_01**********************************
+21/04/2021 06:02:46 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 06:02:46 PM - <module> - INFO - Performing post
+21/04/2021 06:02:47 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7648, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8957, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7648, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8957}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 06:02:47 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 06:02:47 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 06:02:47 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 06:02:47 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 06:02:47 PM - <module> - INFO - Tactic Id: 7648
+21/04/2021 06:02:47 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 06:02:47 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 06:02:47 PM - <module> - INFO - account_id set to : 36
+21/04/2021 06:02:47 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 06:02:47 PM - <module> - INFO - Test case name: po_02**********************************
+21/04/2021 06:02:47 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 06:02:47 PM - <module> - INFO - Performing post
+21/04/2021 06:02:47 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7649, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8958, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7649, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8958}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 06:02:47 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 06:02:47 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 06:02:47 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 06:02:47 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 06:02:47 PM - <module> - INFO - Tactic status: draft
+21/04/2021 06:02:47 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 06:02:47 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 06:02:47 PM - <module> - INFO - account_id set to : 36
+21/04/2021 06:02:47 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 06:02:47 PM - <module> - INFO - Test case name: po_03**********************************
+21/04/2021 06:02:47 PM - <module> - INFO - Body set to: {
+        "status": "on",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 06:02:47 PM - <module> - INFO - Performing post
+21/04/2021 06:02:48 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7650, 'name': None, 'start_date': None, 'end_date': None, 'status': 'on', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8959, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7650, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8959}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'on', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 06:02:48 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 06:02:48 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 06:02:48 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 06:02:48 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 06:02:48 PM - <module> - INFO - Tactic status: on
+21/04/2021 06:02:48 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 06:02:48 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 06:02:48 PM - <module> - INFO - account_id set to : 36
+21/04/2021 06:02:48 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 06:02:48 PM - <module> - INFO - Test case name: po_04**********************************
+21/04/2021 06:02:48 PM - <module> - INFO - Body set to: {
+        "status": "off",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 06:02:48 PM - <module> - INFO - Performing post
+21/04/2021 06:02:48 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7651, 'name': None, 'start_date': None, 'end_date': None, 'status': 'off', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8960, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7651, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8960}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'off', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 06:02:48 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 06:02:48 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 06:02:48 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 06:02:48 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 06:02:48 PM - <module> - INFO - Tactic status: off
+21/04/2021 06:02:48 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 06:02:48 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 06:02:48 PM - <module> - INFO - account_id set to : 36
+21/04/2021 06:02:48 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 06:02:48 PM - <module> - INFO - Test case name: po_05**********************************
+21/04/2021 06:02:48 PM - <module> - INFO - Body set to: {
+        "status": null,
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 06:02:48 PM - <module> - INFO - Performing post
+21/04/2021 06:02:48 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7652, 'name': None, 'start_date': None, 'end_date': None, 'status': None, 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8961, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7652, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8961}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': None, 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 06:02:48 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 06:02:48 PM - <module> - INFO - Expected Response Code: 400
+21/04/2021 06:02:48 PM - <module> - ERROR - Actule Response Code(200) does not matches Expected Response Code(400)
+21/04/2021 06:02:48 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 06:02:48 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 06:02:48 PM - <module> - INFO - account_id set to : 36
+21/04/2021 06:02:48 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 06:02:48 PM - <module> - INFO - Test case name: po_06**********************************
+21/04/2021 06:02:48 PM - <module> - INFO - Body set to: {
+        "status": "xyz",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 06:02:48 PM - <module> - INFO - Performing post
+21/04/2021 06:02:48 PM - <module> - INFO - Response: {'error': True, 'data': {'status': ['"xyz" is not a valid choice.']}}
+21/04/2021 06:02:48 PM - <module> - INFO - Actule Response Code: 400
+21/04/2021 06:02:48 PM - <module> - INFO - Expected Response Code: 400
+21/04/2021 06:02:48 PM - <module> - INFO - Actule Error Code: True
+21/04/2021 06:02:48 PM - <module> - INFO - Expected Error Code: TRUE
+21/04/2021 06:46:18 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 06:46:18 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 06:46:18 PM - <module> - INFO - account_id set to : 36
+21/04/2021 06:46:18 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 06:46:18 PM - <module> - INFO - Test case name: po_01**********************************
+21/04/2021 06:46:18 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 06:46:18 PM - <module> - INFO - Performing post
+21/04/2021 06:46:18 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7653, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8962, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7653, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8962}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 06:46:18 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 06:46:18 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 06:46:18 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 06:46:18 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 06:46:18 PM - <module> - INFO - Tactic Id: 7653
+21/04/2021 06:46:18 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 06:46:18 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 06:46:18 PM - <module> - INFO - account_id set to : 36
+21/04/2021 06:46:18 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 06:46:18 PM - <module> - INFO - Test case name: po_02**********************************
+21/04/2021 06:46:18 PM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 06:46:18 PM - <module> - INFO - Performing post
+21/04/2021 06:46:19 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7654, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8963, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7654, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8963}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 06:46:19 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 06:46:19 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 06:46:19 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 06:46:19 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 06:46:19 PM - <module> - INFO - Tactic status: draft
+21/04/2021 06:46:19 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 06:46:19 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 06:46:19 PM - <module> - INFO - account_id set to : 36
+21/04/2021 06:46:19 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 06:46:19 PM - <module> - INFO - Test case name: po_03**********************************
+21/04/2021 06:46:19 PM - <module> - INFO - Body set to: {
+        "status": "on",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 06:46:19 PM - <module> - INFO - Performing post
+21/04/2021 06:46:19 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7655, 'name': None, 'start_date': None, 'end_date': None, 'status': 'on', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8964, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7655, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8964}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'on', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 06:46:19 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 06:46:19 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 06:46:19 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 06:46:19 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 06:46:19 PM - <module> - INFO - Tactic status: on
+21/04/2021 06:46:19 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 06:46:19 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 06:46:19 PM - <module> - INFO - account_id set to : 36
+21/04/2021 06:46:19 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 06:46:19 PM - <module> - INFO - Test case name: po_04**********************************
+21/04/2021 06:46:19 PM - <module> - INFO - Body set to: {
+        "status": "off",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 06:46:19 PM - <module> - INFO - Performing post
+21/04/2021 06:46:19 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7656, 'name': None, 'start_date': None, 'end_date': None, 'status': 'off', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8965, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7656, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8965}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'off', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 06:46:19 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 06:46:19 PM - <module> - INFO - Expected Response Code: 200
+21/04/2021 06:46:19 PM - <module> - INFO - Actule Error Code: False
+21/04/2021 06:46:19 PM - <module> - INFO - Expected Error Code: FALSE
+21/04/2021 06:46:19 PM - <module> - INFO - Tactic status: off
+21/04/2021 06:46:19 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 06:46:19 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 06:46:19 PM - <module> - INFO - account_id set to : 36
+21/04/2021 06:46:19 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 06:46:19 PM - <module> - INFO - Test case name: po_05**********************************
+21/04/2021 06:46:19 PM - <module> - INFO - Body set to: {
+        "status": null,
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 06:46:19 PM - <module> - INFO - Performing post
+21/04/2021 06:46:19 PM - <module> - INFO - Response: {'error': False, 'data': {'id': 7657, 'name': None, 'start_date': None, 'end_date': None, 'status': None, 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8966, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7657, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8966}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': None, 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+21/04/2021 06:46:19 PM - <module> - INFO - Actule Response Code: 200
+21/04/2021 06:46:19 PM - <module> - INFO - Expected Response Code: 400
+21/04/2021 06:46:19 PM - <module> - ERROR - Actule Response Code(200) does not matches Expected Response Code(400)
+21/04/2021 06:46:19 PM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+21/04/2021 06:46:19 PM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+21/04/2021 06:46:19 PM - <module> - INFO - account_id set to : 36
+21/04/2021 06:46:19 PM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+21/04/2021 06:46:19 PM - <module> - INFO - Test case name: po_06**********************************
+21/04/2021 06:46:19 PM - <module> - INFO - Body set to: {
+        "status": "xyz",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+21/04/2021 06:46:19 PM - <module> - INFO - Performing post
+21/04/2021 06:46:19 PM - <module> - INFO - Response: {'error': True, 'data': {'status': ['"xyz" is not a valid choice.']}}
+21/04/2021 06:46:19 PM - <module> - INFO - Actule Response Code: 400
+21/04/2021 06:46:19 PM - <module> - INFO - Expected Response Code: 400
+21/04/2021 06:46:19 PM - <module> - INFO - Actule Error Code: True
+21/04/2021 06:46:19 PM - <module> - INFO - Expected Error Code: TRUE
+22/04/2021 12:38:56 AM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+22/04/2021 12:38:56 AM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+22/04/2021 12:38:56 AM - <module> - INFO - account_id set to : 36
+22/04/2021 12:38:56 AM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+22/04/2021 12:38:56 AM - <module> - INFO - Test case name: po_01**********************************
+22/04/2021 12:38:56 AM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+22/04/2021 12:38:56 AM - <module> - INFO - Performing post
+22/04/2021 12:38:57 AM - <module> - INFO - Response: {'error': False, 'data': {'id': 7662, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8971, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7662, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8971}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+22/04/2021 12:38:57 AM - <module> - INFO - Actule Response Code: 200
+22/04/2021 12:38:57 AM - <module> - INFO - Expected Response Code: 200
+22/04/2021 12:38:57 AM - <module> - INFO - Actule Error Code: False
+22/04/2021 12:38:57 AM - <module> - INFO - Expected Error Code: FALSE
+22/04/2021 12:38:57 AM - <module> - INFO - Tactic Id: 7662
+22/04/2021 12:38:57 AM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+22/04/2021 12:38:57 AM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+22/04/2021 12:38:57 AM - <module> - INFO - account_id set to : 36
+22/04/2021 12:38:57 AM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+22/04/2021 12:38:57 AM - <module> - INFO - Test case name: po_02**********************************
+22/04/2021 12:38:57 AM - <module> - INFO - Body set to: {
+        "status": "draft",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+22/04/2021 12:38:57 AM - <module> - INFO - Performing post
+22/04/2021 12:38:58 AM - <module> - INFO - Response: {'error': False, 'data': {'id': 7663, 'name': None, 'start_date': None, 'end_date': None, 'status': 'draft', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8972, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7663, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8972}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'draft', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+22/04/2021 12:38:58 AM - <module> - INFO - Actule Response Code: 200
+22/04/2021 12:38:58 AM - <module> - INFO - Expected Response Code: 200
+22/04/2021 12:38:58 AM - <module> - INFO - Actule Error Code: False
+22/04/2021 12:38:58 AM - <module> - INFO - Expected Error Code: FALSE
+22/04/2021 12:38:58 AM - <module> - INFO - Tactic status: draft
+22/04/2021 12:38:58 AM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+22/04/2021 12:38:58 AM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+22/04/2021 12:38:58 AM - <module> - INFO - account_id set to : 36
+22/04/2021 12:38:58 AM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+22/04/2021 12:38:58 AM - <module> - INFO - Test case name: po_03**********************************
+22/04/2021 12:38:58 AM - <module> - INFO - Body set to: {
+        "status": "on",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+22/04/2021 12:38:58 AM - <module> - INFO - Performing post
+22/04/2021 12:38:58 AM - <module> - INFO - Response: {'error': False, 'data': {'id': 7664, 'name': None, 'start_date': None, 'end_date': None, 'status': 'on', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8973, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7664, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8973}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'on', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+22/04/2021 12:38:58 AM - <module> - INFO - Actule Response Code: 200
+22/04/2021 12:38:58 AM - <module> - INFO - Expected Response Code: 200
+22/04/2021 12:38:58 AM - <module> - INFO - Actule Error Code: False
+22/04/2021 12:38:58 AM - <module> - INFO - Expected Error Code: FALSE
+22/04/2021 12:38:58 AM - <module> - INFO - Tactic status: on
+22/04/2021 12:38:58 AM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+22/04/2021 12:38:58 AM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+22/04/2021 12:38:58 AM - <module> - INFO - account_id set to : 36
+22/04/2021 12:38:58 AM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+22/04/2021 12:38:58 AM - <module> - INFO - Test case name: po_04**********************************
+22/04/2021 12:38:58 AM - <module> - INFO - Body set to: {
+        "status": "off",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+22/04/2021 12:38:58 AM - <module> - INFO - Performing post
+22/04/2021 12:38:58 AM - <module> - INFO - Response: {'error': False, 'data': {'id': 7665, 'name': None, 'start_date': None, 'end_date': None, 'status': 'off', 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8974, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7665, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8974}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': 'off', 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+22/04/2021 12:38:58 AM - <module> - INFO - Actule Response Code: 200
+22/04/2021 12:38:58 AM - <module> - INFO - Expected Response Code: 200
+22/04/2021 12:38:58 AM - <module> - INFO - Actule Error Code: False
+22/04/2021 12:38:58 AM - <module> - INFO - Expected Error Code: FALSE
+22/04/2021 12:38:58 AM - <module> - INFO - Tactic status: off
+22/04/2021 12:38:58 AM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+22/04/2021 12:38:58 AM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+22/04/2021 12:38:58 AM - <module> - INFO - account_id set to : 36
+22/04/2021 12:38:58 AM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+22/04/2021 12:38:58 AM - <module> - INFO - Test case name: po_05**********************************
+22/04/2021 12:38:58 AM - <module> - INFO - Body set to: {
+        "status": null,
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+22/04/2021 12:38:58 AM - <module> - INFO - Performing post
+22/04/2021 12:38:58 AM - <module> - INFO - Response: {'error': False, 'data': {'id': 7666, 'name': None, 'start_date': None, 'end_date': None, 'status': None, 'ad_account_id': 36, 'auth_user': 11, 'tasks': [{'id': 8975, 'dsl': 'when fb_primary_actions_post_engagement  for today >= 0 perform the following actions \n \tPAUSE_CAMPAIGN\nend', 'logic': 'T1', 'type': '', 'value': '', 'tactic': 7666, 'triggers': [{'name': 'fb_primary_actions_post_engagement', 'condition': '>=', 'value': '0', 'time': 'today', 'aggregate': '', 'task': 8975}], 'meta_data': {}, 'name': 'PAUSE_CAMPAIGN'}], 'filtered_ids': None, 'recalculate_filters': None, 'level': 'campaign', 'tactic_json': {'status': None, 'date_schedule': 'continuously', 'level': 'campaign', 'client_name': 'demo client', 'type': 'performance', 'tasks': [{'task': 'pause_campaign', 'meta_data': {}, 'conditions': {'child_conditions': [{'name': 'fb_primary_actions_post_engagement', 'time': 'today', 'condition': '>=', 'value': 0, 'rel_child': 'AND', 'aggregate': '', 'child_conditions': [], 'child_groups': []}], 'child_groups': []}}], 'setup_type': 'exp', 'task_sequence': None, 'objective': '', 'ad_account_id': 36}, 'setup_type': 'exp', 'frequency_limit': None, 'type': 'performance', 'action_execution_frequency': None}}
+22/04/2021 12:38:58 AM - <module> - INFO - Actule Response Code: 200
+22/04/2021 12:38:58 AM - <module> - INFO - Expected Response Code: 400
+22/04/2021 12:38:58 AM - <module> - ERROR - Actule Response Code(200) does not matches Expected Response Code(400)
+NoneType: None
+22/04/2021 12:38:58 AM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+22/04/2021 12:38:58 AM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+22/04/2021 12:38:58 AM - <module> - INFO - account_id set to : 36
+22/04/2021 12:38:58 AM - <module> - INFO - Endpoint set to : adaccount/36/tactic
+22/04/2021 12:38:58 AM - <module> - INFO - Test case name: po_06**********************************
+22/04/2021 12:38:58 AM - <module> - INFO - Body set to: {
+        "status": "xyz",
+        "date_schedule": "continuously",
+        "level": "campaign",
+        "client_name": "demo client",
+        "type": "performance",
+        "tasks": [{
+                "task": "pause_campaign",
+                "meta_data": {},
+                "conditions": {
+                        "child_conditions": [{
+                                "name": "fb_primary_actions_post_engagement",
+                                "time": "today",
+                                "condition": ">=",
+                                "value": 0,
+                                "rel_child": "AND",
+                                "aggregate": "",
+                                "child_conditions": [],
+                                "child_groups": []
+                        }],
+                        "child_groups": []
+                }
+        }],
+        "setup_type": "exp",
+        "task_sequence": null,
+        "objective": ""
+}
+22/04/2021 12:38:58 AM - <module> - INFO - Performing post
+22/04/2021 12:38:58 AM - <module> - INFO - Response: {'error': True, 'data': {'status': ['"xyz" is not a valid choice.']}}
+22/04/2021 12:38:58 AM - <module> - INFO - Actule Response Code: 400
+22/04/2021 12:38:58 AM - <module> - INFO - Expected Response Code: 400
+22/04/2021 12:38:58 AM - <module> - INFO - Actule Error Code: True
+22/04/2021 12:38:58 AM - <module> - INFO - Expected Error Code: TRUE
+22/04/2021 12:46:31 AM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+22/04/2021 12:46:31 AM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+22/04/2021 12:46:31 AM - <module> - INFO - account_id set to : 36
+22/04/2021 12:46:32 AM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+22/04/2021 12:46:32 AM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+22/04/2021 12:46:32 AM - <module> - INFO - account_id set to : 36
+22/04/2021 12:46:32 AM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+22/04/2021 12:46:32 AM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+22/04/2021 12:46:32 AM - <module> - INFO - account_id set to : 36
+22/04/2021 12:46:32 AM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+22/04/2021 12:46:32 AM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+22/04/2021 12:46:32 AM - <module> - INFO - account_id set to : 36
+22/04/2021 12:46:32 AM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+22/04/2021 12:46:32 AM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+22/04/2021 12:46:32 AM - <module> - INFO - account_id set to : 36
+22/04/2021 12:46:32 AM - <module> - INFO - Base URL set to : https://optimization-staging.pyxispm.com/api/
+22/04/2021 12:46:32 AM - <module> - INFO - Headers set to : {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2OTI2NjA1LCJqdGkiOiJkYmUzNTA3NWNiZGM0ZmQ3YTUzMDc2MTZhN2QwNGY2NSIsImVtYWlsIjoiY3JlYXRpdmUtYW5hbHlzaXNAYWlxdWlyZS5jb20iLCJ1c2VybmFtZSI6ImNyZWF0aXZlLWFuYWx5c2lzIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsImlkIjo1Mn0.NFYMqO826pn-Ky8Gfr-y7aKns2ogaLgBd-Em7fzVyig', 'content-type': 'application/json'}
+22/04/2021 12:46:32 AM - <module> - INFO - account_id set to : 36
