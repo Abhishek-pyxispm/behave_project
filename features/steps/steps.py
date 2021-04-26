@@ -44,7 +44,7 @@ def set_body(context):
     # Get body code from CSV file row
     context.body = context.row["Test Data"]
     log.info(f"<{context.testcase_id}> - Body set to: {context.body}")
-    # log.info(f"context.body :type{type(context.body)}, plain {context.body}, str:{str(context.body)}")
+    # log.debug(f"context.body :type{type(context.body)}, plain {context.body}, str:{str(context.body)}")
     # if context.body == "": raise Exception("There is no data in body")
 
 
@@ -53,9 +53,7 @@ def perform_post(context):
     log.info(f"<{context.testcase_id}> - Performing post")
     context.response = requests.post(context.baseURL + context.endpoint, data=context.body, headers=context.headers)
     log.info(f'<{context.testcase_id}> - POST Response: {context.response.json()}')
-    # if str(context.response.json()["error"]).lower() == "false":
-    #     context.tactic_id = context.response.json()["data"]["id"]
-    #     log.info(f'<{context.testcase_id}> - tactic_id: {context.tactic_id}')
+
 
 
 @then(u'Validate HTTP response code')
