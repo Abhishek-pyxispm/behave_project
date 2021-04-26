@@ -4,6 +4,7 @@ import utilities.rw_csv as csv
 from utilities.log import custom_logger as log
 
 log = log()
+log.info("*******************************************NEW RUN*********************************************************")
 
 
 @given(u'I set base REST API url and headers correctly')
@@ -17,59 +18,96 @@ def setup_baseurl(context):
     log.info(f"account_id set to : {context.account_id}")
 
 
+@given(u'Execute test case {testcase_id}')
+def get_testcase_data(context, testcase_id):
+    context.testcase_id = testcase_id
+    context.row = csv.read_csv(testcase_id, key="row")
+    try:
+        # Check if CSV file returned any error
+        if context.row["error"]: raise context.row["error_msg"]
+    except Exception as e:
+        # If the error is not raised for "error" key not in row (context.row["error"]) log and raise error message
+        if "error" not in str(e):
+            log.exception(e)
+            raise e
+    log.info(f'<{context.testcase_id}> - CSV File row data: {context.row}')
+
+
 @given(u'I Set posts api endpoint to Step 1 endpoint')
 def step1_endpoint(context):
     context.endpoint = f"adaccount/{context.account_id}/tactic"
-    log.info(f"Endpoint set to : {context.endpoint}")
+    log.info(f"<{context.testcase_id}> - Endpoint set to : {context.endpoint}")
 
 
-
-@when(u'set the body of request to {testcase_name}')
-def set_body(context, testcase_name):
-    # context.body = "{\r\n\t\"status\": \"draft\",\r\n\t\"date_schedule\": \"continuously\",\r\n\t\"level\": \"campaign\",\r\n\t\"action_execution_frequency\": \"28\",\r\n\r\n\t\"tasks\": [{\r\n\t\t\"task\": \"add_to_name\",\r\n\t\t\"meta_data\": {\r\n\t\t\t\"text\": \"_test 1\"\r\n\t\t},\r\n\t\t\"conditions\": {\r\n\t\t\t\"child_conditions\": [{\r\n\t\t\t\t\"name\": \"fb_primary_impressions\",\r\n\t\t\t\t\"time\": \"yesterday\",\r\n\t\t\t\t\"condition\": \">=\",\r\n\t\t\t\t\"value\": 0,\r\n\t\t\t\t\"absolute_value\": 0,\r\n\t\t\t\t\"rel_child\": \"AND\",\r\n\t\t\t\t\"aggregate\": \"\",\r\n\t\t\t\t\"child_conditions\": [],\r\n\t\t\t\t\"child_groups\": []\r\n\t\t\t}],\r\n\t\t\t\"child_groups\": []\r\n\t\t}\r\n\t}, {\r\n\t\t\"task\": \"remove_from_name\",\r\n\t\t\"meta_data\": {\r\n\t\t\t\"text\": \"_test 1\"\r\n\t\t},\r\n\t\t\"conditions\": {\r\n\t\t\t\"child_conditions\": [{\r\n\t\t\t\t\"name\": \"fb_primary_impressions\",\r\n\t\t\t\t\"time\": \"yesterday\",\r\n\t\t\t\t\"condition\": \">=\",\r\n\t\t\t\t\"value\": 0,\r\n\t\t\t\t\"absolute_value\": 0,\r\n\t\t\t\t\"rel_child\": \"AND\",\r\n\t\t\t\t\"aggregate\": \"\",\r\n\t\t\t\t\"child_conditions\": [],\r\n\t\t\t\t\"child_groups\": []\r\n\t\t\t}],\r\n\t\t\t\"child_groups\": []\r\n\t\t}\r\n\t}],\r\n\t\"setup_type\": \"exp\",\r\n\t\"task_sequence\": null,\r\n\t\"objective\": \"\"\r\n}"
-    context.testcase_name = testcase_name
-    context.body = csv.read_csv(testcase_name, key="Test Data")
-    log.info(f"Test case name: {context.testcase_name}")
-    log.info(f"Body set to: {context.body}")
+@when(u'set the body of request')
+def set_body(context):
+    # Get body code from CSV file row
+    context.body = context.row["Test Data"]
+    log.info(f"<{context.testcase_id}> - Body set to: {context.body}")
+    # log.info(f"context.body :type{type(context.body)}, plain {context.body}, str:{str(context.body)}")
+    # if context.body == "": raise Exception("There is no data in body")
 
 
 @when(u'perfrom post')
 def perform_post(context):
-    log.info("Performing post")
+    log.info(f"<{context.testcase_id}> - Performing post")
     context.response = requests.post(context.baseURL + context.endpoint, data=context.body, headers=context.headers)
-    log.info(f'Response: {context.response.json()}')
+    log.info(f'<{context.testcase_id}> - POST Response: {context.response.json()}')
+    # if str(context.response.json()["error"]).lower() == "false":
+    #     context.tactic_id = context.response.json()["data"]["id"]
+    #     log.info(f'<{context.testcase_id}> - tactic_id: {context.tactic_id}')
 
 
-@then(u'I receive valid HTTP response code as {code}')
-def validateResponseCode(context, code):
-    # Response code from CSV
-    context.response_code = csv.read_csv(context.testcase_name, key="Expected status code")
-    log.info(f"Actule Response Code: {context.response.status_code}")
-    log.info(f"Expected Response Code: {context.response_code}")
+@then(u'Validate HTTP response code')
+def validate_response_code(context):
+    # Get response code from CSV file
+    context.response_code = context.row["Expected status code"]
+    # csv.read_csv(context.testcase_id, key="Expected status code")
+    log.info(f"<{context.testcase_id}> - Actule Response Code: {context.response.status_code}")
+    log.info(f"<{context.testcase_id}> - Expected Response Code: {context.response_code}")
     assert str(context.response.status_code) == context.response_code, \
-        log.exception(f"Actule Response Code({context.response.status_code}) does not matches Expected Response Code({context.response_code})")
+        log.exception(f"<{context.testcase_id}> - Actule Response Code({context.response.status_code})does not "
+                      f"matches Expected Response Code({context.response_code})")
 
 
-@then(u'validate error is {err_code}')
-def validate_response_error(context, err_code):
-    err_code = csv.read_csv(context.testcase_name, key="Error")
-    log.info(f'Actule Error Code: {context.response.json()["error"]}')
-    log.info(f'Expected Error Code: {err_code}')
+@then(u'Validate error')
+def validate_response_error(context):
+    # Get err_code from CSV file
+    err_code = context.row["Error"]
+    context.a_err_code = context.response.json()["error"]
+    # csv.read_csv(context.testcase_id, key="Error")
+    log.info(f'<{context.testcase_id}> - Actule Error Code: {context.a_err_code}')
+    log.info(f'<{context.testcase_id}> - Expected Error Code: {err_code}')
     assert str(context.response.json()["error"]).lower() == err_code.lower(), \
-        log.exception(f'Actule Error Code ({context.response.json()["error"]} does not matches Expected Error Code ({err_code})')
+        log.exception(
+            f'<{context.testcase_id}> - Actule Error Code ({context.response.json()["error"]}'
+            f' does not matches Expected Error Code ({err_code})')
 
 
 @then(u'Extract tactic Id')
-def step_impl(context):
+def get_tactic_id(context):
     context.tactic_id = context.response.json()["data"]["id"]
-    print(f'Tactic Id: {context.tactic_id}')
-    log.info(f'Tactic Id: {context.tactic_id}')
+    print(f'<{context.testcase_id}> - Tactic Id: {context.tactic_id}')
+    log.info(f'<{context.testcase_id}> - Tactic Id: {context.tactic_id}')
 
 
 @then(u'validate if is status {status}')
-def step_impl(context, status):
+def validate_status(context, status):
     context.status = context.response.json()["data"]["status"]
-    print(f'Tactic status: {context.status}')
-    log.info(f'Tactic status: {context.status}')
+    log.info(f'<{context.testcase_id}> - Tactic status: {context.status}')
     assert str(context.status).lower() == status.lower(), \
-        log.exception(f'Actule Tactic status ({context.status} does not matches Expected Error Code ({status})')
+        log.exception(
+            f'<{context.testcase_id}> - Actule Tactic status ({context.status}'
+            f' does not matches Expected Error Code ({status})')
+
+
+@then(u'delete the tactic')
+def del_tactic(context):
+    if not context.a_err_code:
+        get_tactic_id(context)
+        # context.tactic_id = context.response.json()["data"]["id"]
+        context.del_response = requests.delete(
+            context.baseURL + f"adaccount/{context.account_id}/tactic/{context.tactic_id}", headers=context.headers)
+        log.info(f'<{context.testcase_id}> - DELETE Response: {context.del_response.json()}')
+    else:
+        log.info(f'<{context.testcase_id}> - DELETE Response: Tactic was not created.')
