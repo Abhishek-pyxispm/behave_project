@@ -10,11 +10,11 @@ Feature: Tactic creation Step 1 API testing
             And perfrom post
         Then Validate HTTP response code
             And Validate error
-        Then Extract tactic Id
+         Then Extract tactic Id
             And delete the tactic
 
 
-  Scenario Outline: API Step 1: Validate if "status" accepts <status>
+        Scenario Outline: API Step 1: Validate if "status" accepts <status>
         Given Execute test case <test_case>
             And I Set posts api endpoint to Step 1 endpoint
         When set the body of request
@@ -30,7 +30,6 @@ Feature: Tactic creation Step 1 API testing
         | po_04     |  off   |
         | po_05     | null   |
         | po_06     | ['"xyz" is not a valid choice.'] |
-        | po_07     |
 #    Scenario: API Step 1: Validate if "status" accepts "draft"
 #        Given Execute test case po_02
 #            And I Set posts api endpoint to Step 1 endpoint
