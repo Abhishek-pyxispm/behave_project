@@ -1,10 +1,11 @@
 from behave import given, when, then
 import requests
 import utilities.rw_csv as csv
+from utilities.resources import ApiResources
 from utilities.log import custom_logger as log
 
 log = log()
-log.info("*******************************************NEW RUN*********************************************************")
+log.info("\n\n\n\n***************************************NEW RUN*****************************************************")
 
 
 @given(u'I set base REST API url and headers correctly')
@@ -26,6 +27,7 @@ def setup_baseurl(context):
 def get_testcase_data(context, testcase_id):
     try:
         context.testcase_id = testcase_id
+        # Fetching all data from the provided testcase_id from the CSV file
         context.row = csv.read_csv(testcase_id, key="row")
         try:
             # Check if CSV file returned any error
@@ -41,35 +43,44 @@ def get_testcase_data(context, testcase_id):
         raise e
 
 
-@given(u'I Set posts api endpoint to Step 1 endpoint')
-def step1_endpoint(context):
+@given(u'I Set posts api endpoint to {endpoint} endpoint')
+def step1_endpoint(context, endpoint):
     try:
-        context.endpoint = f"adaccount/{context.account_id}/tactic"
+        # context.endpoint = f"adaccount/{context.account_id}/tactic"
+        context.ep = endpoint
+        context.endpoint = f"ApiResources.{endpoint}"
+        context.endpoint = eval(eval(f'{context.endpoint}'))
         log.info(f"<{context.testcase_id}> - Endpoint set to : {context.endpoint}")
     except Exception as e:
         log.exception(str(e))
         raise e
 
 
-@when(u'set the body of request')
+@when(u'Set the body of request')
 def set_body(context):
     try:
         # Get body code from CSV file row
         context.body = context.row["Test Data"]
         log.info(f"<{context.testcase_id}> - Body set to: {context.body}")
-        # log.info(f"context.body :type{type(context.body)}, plain {context.body}, str:{str(context.body)}")
+        # log.debug(f"context.body :type{type(context.body)}, plain {context.body}, str:{str(context.body)}")
         # if context.body == "": raise Exception("There is no data in body")
     except Exception as e:
         log.exception(str(e))
         raise e
 
 
-@when(u'perfrom post')
+@when(u'Perfrom post')
 def perform_post(context):
     try:
         log.info(f"<{context.testcase_id}> - Performing post")
         context.response = requests.post(context.baseURL + context.endpoint, data=context.body, headers=context.headers)
         log.info(f'<{context.testcase_id}> - POST Response: {context.response.json()}')
+        if str(context.ep) == "create_step_1" and not context.response.json()["error"]:
+            get_tactic_id(context)
+            context.tactic = True
+        elif str(context.ep) == "create_step_1":
+            context.tactic = False
+
     except Exception as e:
         log.exception(str(e))
         raise e
@@ -107,6 +118,9 @@ def validate_response_error(context):
             log.exception(
                 f'<{context.testcase_id}> - Actule Error Code ({context.response.json()["error"]}'
                 f' does not matches Expected Error Code ({err_code})')
+    except AssertionError as e:
+        log.exception(e)
+        raise e
     except Exception as e:
         log.exception(str(e))
         raise e
@@ -123,7 +137,7 @@ def get_tactic_id(context):
         raise e
 
 
-@then(u'validate if is status {status}')
+@then(u'Validate if is status {status}')
 def validate_status(context, status):
     try:
         context.status = context.response.json()["data"]["status"]
@@ -132,17 +146,18 @@ def validate_status(context, status):
             log.exception(
                 f'<{context.testcase_id}> - Actule Tactic status ({context.status}'
                 f' does not matches Expected Error Code ({status})')
+    except AssertionError as e:
+        log.exception(e)
+        raise e
     except Exception as e:
         log.exception(str(e))
         raise e
 
 
-@then(u'delete the tactic')
+@then(u'Delete the tactic')
 def del_tactic(context):
     try:
-        if not context.actual_err_code:
-            get_tactic_id(context)
-            # context.tactic_id = context.response.json()["data"]["id"]
+        if context.tactic:
             context.del_response = requests.delete(
                 context.baseURL + f"adaccount/{context.account_id}/tactic/{context.tactic_id}", headers=context.headers)
             log.info(f'<{context.testcase_id}> - DELETE Response: {context.del_response.json()}')
