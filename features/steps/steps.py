@@ -14,10 +14,10 @@ def setup_baseurl(context):
         context.baseURL = context.config.userdata.get("base_url", "url")
         context.headers = {"token": context.config.userdata.get("access_token", "token"),
                            "content-type": "application/json"}
-        context.account_id = context.config.userdata.get("account_id", "1001")
+        context.ad_account_id = context.config.userdata.get("account_id", "1001")
         log.info(f"Base URL set to : {context.baseURL}")
         log.info(f"Headers set to : {context.headers}")
-        log.info(f"account_id set to : {context.account_id}")
+        log.info(f"account_id set to : {context.ad_account_id}")
     except Exception as e:
         log.exception(str(e))
         raise e
@@ -43,8 +43,8 @@ def get_testcase_data(context, testcase_id):
         raise e
 
 
-@given(u'I Set posts api endpoint to {endpoint} endpoint')
-def step1_endpoint(context, endpoint):
+@when(u'I set api endpoint to {endpoint} endpoint')
+def set_endpoint(context, endpoint):
     try:
         # context.endpoint = f"adaccount/{context.account_id}/tactic"
         context.ep = endpoint
@@ -60,7 +60,7 @@ def step1_endpoint(context, endpoint):
 def set_body(context):
     try:
         # Get body code from CSV file row
-        context.body = context.row["Test Data"]
+        context.body = context.row["Body"]
         log.info(f"<{context.testcase_id}> - Body set to: {context.body}")
         # log.debug(f"context.body :type{type(context.body)}, plain {context.body}, str:{str(context.body)}")
         # if context.body == "": raise Exception("There is no data in body")
@@ -75,12 +75,23 @@ def perform_post(context):
         log.info(f"<{context.testcase_id}> - Performing post")
         context.response = requests.post(context.baseURL + context.endpoint, data=context.body, headers=context.headers)
         log.info(f'<{context.testcase_id}> - POST Response: {context.response.json()}')
-        if str(context.ep) == "create_step_1" and not context.response.json()["error"]:
+        if str(context.ep) == "create_tactic" and context.response.json()["data"]["success"]:
             get_tactic_id(context)
             context.tactic = True
         elif str(context.ep) == "create_step_1":
             context.tactic = False
 
+    except Exception as e:
+        log.exception(str(e))
+        raise e
+
+
+@when(u'Perform get')
+def perform_get(context):
+    try:
+        log.info(f"<{context.testcase_id}> - Performing GET")
+        context.response = requests.get(context.baseURL + context.endpoint, headers=context.headers)
+        log.info(f'<{context.testcase_id}> - GET Response: {context.response.json()}')
     except Exception as e:
         log.exception(str(e))
         raise e
@@ -129,7 +140,7 @@ def validate_response_error(context):
 @then(u'Extract tactic Id')
 def get_tactic_id(context):
     try:
-        context.tactic_id = context.response.json()["data"]["id"]
+        context.tactic_id = context.response.json()["data"]["tactic_id"]
         print(f'<{context.testcase_id}> - Tactic Id: {context.tactic_id}')
         log.info(f'<{context.testcase_id}> - Tactic Id: {context.tactic_id}')
     except Exception as e:
@@ -137,15 +148,70 @@ def get_tactic_id(context):
         raise e
 
 
-@then(u'Validate if is status {status}')
-def validate_status(context, status):
+@then(u'Validate the status')
+def validate_status(context):
     try:
-        context.status = context.response.json()["data"]["status"]
-        log.info(f'<{context.testcase_id}> - Tactic status: {context.status}')
-        assert str(context.status).lower() == status.lower(), \
-            log.exception(
-                f'<{context.testcase_id}> - Actule Tactic status ({context.status}'
-                f' does not matches Expected Error Code ({status})')
+        if context.tactic:
+            set_endpoint(context, "get_tactic_data")
+            perform_get(context)
+            context.actual_status = context.response.json()["data"]["status"]
+            context.expected_status = context.row['Validate']
+            log.info(f'<{context.testcase_id}> - Tactic status: {context.actual_status}')
+            assert str(context.actual_status).lower() == context.expected_status.lower(), \
+                log.exception(
+                    f'<{context.testcase_id}> - Actule Tactic status ({context.actual_status}'
+                    f' does not matches Expected Error Code ({context.expected_status})')
+        else:
+            log.info(f'<{context.testcase_id}> - Validate the status Response: STEP SKIPPED. The tactic was not created\
+            , So there is no tactic to Validate the status.')
+    except AssertionError as e:
+        log.exception(e)
+        raise e
+    except Exception as e:
+        log.exception(str(e))
+        raise e
+
+
+@then(u'Validate the date_schedule')
+def validate_date_schedule(context):
+    try:
+        if context.tactic:
+            set_endpoint(context, "get_tactic_data")
+            perform_get(context)
+            context.actual_date_schedule = context.response.json()["data"]["tactic_json"]["date_schedule"]
+            context.expected_date_schedule = context.row['Validate']
+            log.info(f'<{context.testcase_id}> - Tactic status: {context.actual_date_schedule}')
+            assert str(context.actual_date_schedule).lower() == context.expected_date_schedule.lower(), \
+                log.exception(
+                    f'<{context.testcase_id}> - Actule Tactic status ({context.actual_date_schedule}'
+                    f' does not matches Expected Error Code ({context.expected_date_schedule})')
+        else:
+            log.info(f'<{context.testcase_id}> - Validate the date_schedule Response: STEP SKIPPED. The tactic was not\
+             created, So there is no tactic to Validate the date_schedule.')
+    except AssertionError as e:
+        log.exception(e)
+        raise e
+    except Exception as e:
+        log.exception(str(e))
+        raise e
+
+
+@then(u'Validate the {date}')
+def validate_date(context, date):
+    try:
+        if context.tactic:
+            set_endpoint(context, "get_tactic_data")
+            perform_get(context)
+            context.actual_date = context.response.json()["data"][date]
+            context.expected_date = context.row['Validate']
+            log.info(f'<{context.testcase_id}> - Tactic status: {context.actual_date}')
+            assert str(context.actual_date).lower() == context.expected_date.lower(), \
+                log.exception(
+                    f'<{context.testcase_id}> - Actule Tactic status ({context.actual_date}'
+                    f' does not matches Expected Error Code ({context.expected_date})')
+        else:
+            log.info(f'<{context.testcase_id}> - Validate the date_schedule Response: STEP SKIPPED. The tactic was not\
+             created, So there is no tactic to Validate the {date}.')
     except AssertionError as e:
         log.exception(e)
         raise e
@@ -159,10 +225,11 @@ def del_tactic(context):
     try:
         if context.tactic:
             context.del_response = requests.delete(
-                context.baseURL + f"adaccount/{context.account_id}/tactic/{context.tactic_id}", headers=context.headers)
+                context.baseURL + f"adaccount/{context.ad_account_id}/tactic/{context.tactic_id}", headers=context.headers)
             log.info(f'<{context.testcase_id}> - DELETE Response: {context.del_response.json()}')
         else:
-            log.info(f'<{context.testcase_id}> - DELETE Response: Tactic was not created.')
+            log.info(f'<{context.testcase_id}> - DELETE Response: STEP SKIPPED. The tactic was not created, So there is\
+             no tactic to delete.')
     except Exception as e:
         log.exception(str(e))
         raise e
