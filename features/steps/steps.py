@@ -46,7 +46,6 @@ def get_testcase_data(context, testcase_id):
 @when(u'I set api endpoint to {endpoint} endpoint')
 def set_endpoint(context, endpoint):
     try:
-        # context.endpoint = f"adaccount/{context.account_id}/tactic"
         context.ep = endpoint
         context.endpoint = f"ApiResources.{endpoint}"
         context.endpoint = eval(eval(f'{context.endpoint}'))
@@ -62,8 +61,7 @@ def set_body(context):
         # Get body code from CSV file row
         context.body = context.row["Body"]
         log.info(f"<{context.testcase_id}> - Body set to: {context.body}")
-        # log.debug(f"context.body :type{type(context.body)}, plain {context.body}, str:{str(context.body)}")
-        # if context.body == "": raise Exception("There is no data in body")
+
     except Exception as e:
         log.exception(str(e))
         raise e
@@ -102,7 +100,6 @@ def validate_response_code(context):
     try:
         # Get response code from CSV file
         context.response_code = context.row["Expected status code"]
-        # csv.read_csv(context.testcase_id, key="Expected status code")
         log.info(f"<{context.testcase_id}> - Actule Response Code: {context.response.status_code}")
         log.info(f"<{context.testcase_id}> - Expected Response Code: {context.response_code}")
         assert str(context.response.status_code) == context.response_code, \
@@ -122,7 +119,6 @@ def validate_response_error(context):
         # Get err_code from CSV file
         err_code = context.row["Error"]
         context.actual_err_code = context.response.json()["error"]
-        # csv.read_csv(context.testcase_id, key="Error")
         log.info(f'<{context.testcase_id}> - Actule Error Code: {context.actual_err_code}')
         log.info(f'<{context.testcase_id}> - Expected Error Code: {err_code}')
         assert str(context.response.json()["error"]).lower() == err_code.lower(), \
@@ -141,7 +137,6 @@ def validate_response_error(context):
 def get_tactic_id(context):
     try:
         context.tactic_id = context.response.json()["data"]["tactic_id"]
-        print(f'<{context.testcase_id}> - Tactic Id: {context.tactic_id}')
         log.info(f'<{context.testcase_id}> - Tactic Id: {context.tactic_id}')
     except Exception as e:
         log.exception(str(e))
