@@ -63,7 +63,3 @@ Feature: Tactic creation Step 1 API testing
 
 
 
-
-
-#
-#
