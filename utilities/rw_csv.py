@@ -2,14 +2,14 @@ import csv
 
 
 # read csv file as dictionary
-def read_csv(testcase_id, key):
-    csv_file_path = 'data/PO_API Automation - Sheet1.csv'
+def read_csv(testcase_id, key, csv_file_path='data/PO_API Automation - Sheet1.csv'):
+    # csv_file_path = 'data/PO_API Automation - Sheet1.csv'
     try:
         with open(csv_file_path, mode='r') as csv_file:
             csv_reader = csv.DictReader(csv_file)
-            for row in csv_reader:              
+            for row in csv_reader:
                 if testcase_id == row["Test Id"]:
-                    data = row if key == "row" else row[key]              
+                    data = row if key == "row" else row[key]
                     return data
         test_id = ""
         assert test_id != "", f"Testcase Id not found in CSV file {csv_file_path}"
