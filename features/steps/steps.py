@@ -604,7 +604,7 @@ def validate_filtergroups(context, key='id', expected_result=None):
 
 
 @then(u'Validate if {key} is {expected_result} on task datelogs')
-def validate_filtergroups(context, key='id', expected_result=None):
+def validate_filtergroups(context, key=None, expected_result=None):
     try:
         key = key.lower()
         assert key in ("concept_id", "concept_name", "details"), \
@@ -625,5 +625,3 @@ def validate_filtergroups(context, key='id', expected_result=None):
     except Exception as e:
         log.exception(str(e))
         raise e
-
-
