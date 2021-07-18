@@ -627,5 +627,3 @@ def validate_filtergroups(context, key='id', expected_result=None):
         raise e
 
 
-def a():
-    pass
