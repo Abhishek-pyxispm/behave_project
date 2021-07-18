@@ -626,3 +626,6 @@ def validate_filtergroups(context, key='id', expected_result=None):
         log.exception(str(e))
         raise e
 
+
+def a():
+    pass
