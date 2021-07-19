@@ -58,7 +58,7 @@ def get_testcase_data(context, testcase_id):
 
 
 @when(u'I set level to {level}')
-def set_endpoint(context, level=None):
+def set_level(context, level=None):
     try:
         if level is not None:
             context.level = level.lower()
@@ -140,7 +140,7 @@ def perform_post(context):
             context.tactic = False
 
         if str(context.endpoint_name) == "create_filtergroups" and not context.response.json()["error"]:
-            get_filtergroups_id(context)
+            get_filtergroups_data(context)
 
     except Exception as e:
         log.exception(str(e))
@@ -202,17 +202,18 @@ def validate_response_code(context):
         raise e
 
 
-@then(u'Validate error')
-def validate_response_error(context):
+@then(u'Validate error {error_from}')
+def validate_response_error(context,error_from):
     try:
         # Get err_code from CSV file
-        err_code = context.row["Error"]
+        err_code = context.row["Error"] if error_from=="from csv" else error_from.lower()
         context.actual_err_code = context.response.json()["error"]
-        log.info(f'<{context.testcase_id}> - Actual Error Code: {context.actual_err_code}')
+        # csv.read_csv(context.testcase_id, key="Error")
+        log.info(f'<{context.testcase_id}> - Actule Error Code: {context.actual_err_code}')
         log.info(f'<{context.testcase_id}> - Expected Error Code: {err_code}')
         assert str(context.response.json()["error"]).lower() == err_code.lower(), \
             log.exception(
-                f'<{context.testcase_id}> - Actual Error Code ({context.response.json()["error"]})'
+                f'<{context.testcase_id}> - Actule Error Code ({context.response.json()["error"]}'
                 f' does not matches Expected Error Code ({err_code})')
     except AssertionError as e:
         log.exception(e)
@@ -233,8 +234,8 @@ def get_tactic_id(context):
         raise e
 
 
-@then(u'Get filtergroups id')
-def get_filtergroups_id(context):
+@then(u'Get filtergroups data')
+def get_filtergroups_data(context):
     try:
         context.filtergroups_id = context.response.json()["data"]["id"]
         context.filtergroups_filter_name = context.response.json()["data"]["filter_name"]
@@ -331,6 +332,7 @@ def del_tactic(context):
         else:
             log.info(f'<{context.testcase_id}> - DELETE Response: STEP SKIPPED. The tactic was not created, So there is\
              no tactic to delete.')
+
     except Exception as e:
         log.exception(str(e))
         raise e
@@ -339,14 +341,18 @@ def del_tactic(context):
 @then(u'Validate success {success_source}')
 def validate_success(context, success_source="from csv"):
     try:
-        context.actual_status = context.response.json()["data"]["success"]
+        context.actual_status = context.response.json()["data"]["success"] # if context.endpoint_name != 'delete_tactic' \
+            # else context.response.json()["data"]["Success"]
         context.expected_status = context.row['Validate'] if success_source == "from csv" else success_source
+
         log.info(f'<{context.testcase_id}> - Actual success status: {context.actual_status}')
         log.info(f'<{context.testcase_id}> - Expected success status: {context.expected_status}')
+
         assert str(context.actual_status).lower() == context.expected_status.lower(), \
             log.exception(
                 f'<{context.testcase_id}> - Actual success status ({context.actual_status})'
                 f' does not matches Expected success status ({context.expected_status})')
+
     except AssertionError as e:
         log.exception(e)
         raise e
@@ -379,7 +385,7 @@ def validate_page_size(context):
         context.actual_page_size = context.response.json()["data"]["page_size"]
         log.info(f'<{context.testcase_id}> - Actual Page size: {context.actual_page_size}')
         log.info(f'<{context.testcase_id}> - Expected Page size: 10')
-        assert context.actual_page_size == 10 and context.actual_page_size is not None, \
+        assert context.actual_page_size == "10" and context.actual_page_size is not None, \
             log.exception(
                 f'<{context.testcase_id}> - Actual Page size ({context.actual_page_size})'
                 f' does not matches Expected Page size (10)')
@@ -397,7 +403,7 @@ def validate_current_page(context):
         context.current_page = context.response.json()["data"]["current_page"]
         log.info(f'<{context.testcase_id}> - Actual current page: {context.current_page}')
         log.info(f'<{context.testcase_id}> - Expected current page: 1')
-        assert context.current_page == 1, \
+        assert context.current_page == "1", \
             log.exception(
                 f'<{context.testcase_id}> - Actual current page ({context.current_page})'
                 f' does not matches Expected current page 1.')
@@ -417,7 +423,7 @@ def validate_count(context):
         log.info(f'<{context.testcase_id}> - Expected total count of tactic on the overview: value greater than 0.')
         assert context.tactic_count != 0, \
             log.exception(
-                f'<{context.testcase_id}> - Actual total count of tactic on the overview ({context.tactic_count})'
+                f'<{context.testcase_id}> - Actual total count of tactic on the overview ({context.tactic_count}),'
                 f' does not matches Expected total count of tactic on the overview (value greater than 0)')
     except AssertionError as e:
         log.exception(e)
@@ -430,15 +436,31 @@ def validate_count(context):
 @then(u'Validate tactic id from {get_tacticid}')
 def validate_tactic_id(context, get_tacticid):
     try:
-        # If input is "overview" then get tactic id from overview
-        # Else get tactic id from get tactic data method
+        # If input is "overview" then get tactic id from tactic overview api response
+        # Else get tactic id from GET tactic data api response
         context.id = context.response.json()["data"]["results"][0]["id"] if get_tacticid.lower() == "overview" else \
             context.response.json()["data"]["id"]
         log.info(f'<{context.testcase_id}> - Actual tactic id: {context.tactic_id}')
         assert context.tactic_id == context.id, \
             log.exception(
-                f'<{context.testcase_id}> - Actual tactic id from overview is  ({context.id}'
+                f'<{context.testcase_id}> - Actual tactic id from overview is ({context.id}),'
                 f' does not matches Expected tactic id after tactic creation({context.tactic_id})')
+    except AssertionError as e:
+        log.exception(e)
+        raise e
+    except Exception as e:
+        log.exception(str(e))
+        raise e
+
+
+@then(u'Validate message {message}')
+def validate_massage(context, message):
+    try:
+        context.message = context.response.json()["message"]
+        log.info(f'<{context.testcase_id}> - Actual message : {context.tactic_id}')
+        log.info(f'<{context.testcase_id}> - Expected message : {message}')
+        assert message == context.message, log.exception(f'<{context.testcase_id}> - Actual message ({context.message})'
+                                                         f', does not matches Expected message({message})')
     except AssertionError as e:
         log.exception(e)
         raise e
@@ -565,8 +587,8 @@ def validate_filtergroups(context, key='id', expected_result=None):
                         f' does not matches Expected "{key}" value ({expected_result})')
 
         assert check_value, log.exception(
-                f'<{context.testcase_id}> - Task Id: "{context.task_id}" Not found in the Task Overview of Tactic id:'
-                f'{context.tactic_id}')
+            f'<{context.testcase_id}> - Task Id: "{context.task_id}" Not found in the Task Overview of Tactic id:'
+            f'{context.tactic_id}')
     except AssertionError as e:
         log.exception(e)
         raise e
