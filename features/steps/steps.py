@@ -203,17 +203,17 @@ def validate_response_code(context):
 
 
 @then(u'Validate error {error_from}')
-def validate_response_error(context,error_from):
+def validate_response_error(context, error_from):
     try:
         # Get err_code from CSV file
-        err_code = context.row["Error"] if error_from=="from csv" else error_from.lower()
+        err_code = context.row["Error"] if error_from == "from csv" else error_from.lower()
         context.actual_err_code = context.response.json()["error"]
         # csv.read_csv(context.testcase_id, key="Error")
-        log.info(f'<{context.testcase_id}> - Actule Error Code: {context.actual_err_code}')
+        log.info(f'<{context.testcase_id}> - Actual Error Code: {context.actual_err_code}')
         log.info(f'<{context.testcase_id}> - Expected Error Code: {err_code}')
         assert str(context.response.json()["error"]).lower() == err_code.lower(), \
             log.exception(
-                f'<{context.testcase_id}> - Actule Error Code ({context.response.json()["error"]}'
+                f'<{context.testcase_id}> - Actual Error Code ({context.response.json()["error"]}'
                 f' does not matches Expected Error Code ({err_code})')
     except AssertionError as e:
         log.exception(e)
@@ -341,8 +341,7 @@ def del_tactic(context):
 @then(u'Validate success {success_source}')
 def validate_success(context, success_source="from csv"):
     try:
-        context.actual_status = context.response.json()["data"]["success"] # if context.endpoint_name != 'delete_tactic' \
-            # else context.response.json()["data"]["Success"]
+        context.actual_status = context.response.json()["data"]["success"]
         context.expected_status = context.row['Validate'] if success_source == "from csv" else success_source
 
         log.info(f'<{context.testcase_id}> - Actual success status: {context.actual_status}')

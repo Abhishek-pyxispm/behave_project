@@ -124,7 +124,7 @@ Feature: Performance optimization sanity test suite
         Then Validate HTTP response code
           And Validate error from csv
           And Validate if applied_to is 1 Ad on task overview
-          And Validate if task_checked_status is Rule is not being checked on task overview
+          And Validate if task_checked_status is Rule starts checking at 23:30 IST on task overview
 
 
 
