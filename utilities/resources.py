@@ -1,4 +1,12 @@
 class ApiResources:
+    # GET APIs
+    get_update_body = 'f"automation/adaccount/{context.ad_account_id}/tactic/{context.tactic_id}"'
+
+    # POST APIs
+
+    # PUT APIs
+
+    # DELETE API's
     tactic_validation = 'f"adaccount/{context.ad_account_id}/tacticvalidation"'
     create_tactic = 'f"adaccount/{context.ad_account_id}/tactic"'
     update_tactic = 'f"adaccount/{context.ad_account_id}/tactic"'
