@@ -232,7 +232,7 @@ Feature: Performance optimization sanity test suite
           And Validate error from csv
           And Validate tactic id from overview
 #            And Validate name
-#          And Delete the tactic
+          And Delete the tactic
 
 
         # fail cases
