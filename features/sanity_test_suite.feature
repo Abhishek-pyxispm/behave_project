@@ -199,16 +199,9 @@ Feature: Performance optimization sanity test suite
 
 
 
-        @test
-        Scenario:  test 123
-        Given Execute test case po_sanity 04
-        When I set api endpoint to update_tactic
-          And Get body for update for tactic id 26600
-          And Perform put
-
     #Create the tactic and validate the response
     #Update the tactic and again validate the get response.[perticular updated parameter]
-#        @test
+
         Scenario:  Validate Update tactic data API
         Given Execute test case po_sanity 04
         When I set api endpoint to create_tactic
